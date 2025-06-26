@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Vehicle Detection</title>
+    <style>
+      body {
+    text-align: center;
+    font-family: ArEngravers MT, sans-Engravers MT;
+    background-image: url('/static/lapto11.jpg'); /* Correct path for web server */
+    background-size: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+        h1 {
+            color: #ff0f0f;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            
+        }
+        img {
+            width: 870px;
+            height: 550px;
+            border: 5px solid #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Vehicle Detection</h1>
+    <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+    </div>
+</body>
+</html>
